@@ -5,7 +5,7 @@
 @import 'global';
 
 body {
-  background: linear-gradient(222.26deg, #3B1D60 1.22%, #040D3E 106.28%);
+  background: #0F1145;
   background-attachment: fixed;
   font-family: 'Inter', sans-serif;
   // font-family: 'Montserrat', sans-serif;
@@ -93,7 +93,7 @@ button {
 .top{
   background-image: url(../images/top-bg.svg);
   background-repeat: no-repeat;
-  background-position: 100% 85%;
+  background-position: 90% 85%;
 }
 
 .top__inner {
@@ -349,7 +349,7 @@ button {
 }
 .footer{
   background-image: url(../images/footer-bg.svg);
-  background-position: center;
+  // background-position: center;
 }
 
 .footer__top{

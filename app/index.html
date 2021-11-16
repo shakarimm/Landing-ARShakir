@@ -21,29 +21,72 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__list-item">
-              <a class="menu__list-link" href="#">ABOUT</a>
+              <a class="menu__list-link" href="#about">ABOUT</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="#">GALLERY</a>
+              <a class="menu__list-link" href="#gallery">GALLERY</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="#">PRICING</a>
+              <a class="menu__list-link" href="#pricing">PRICING</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="#">FAQ</a>
+              <a class="menu__list-link" href="#faq">FAQ</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="#">BENEFITS</a>
+              <a class="menu__list-link" href="#benefits">BENEFITS</a>
             </li>
           </ul>
         </nav>
         <div class="user-nav">
-          <a class="user-nav__link" href="#">SIGN IN</a>
-          <a class="user-nav__link" href="#">SIGN UP</a>
+          <button class="user-nav__button">
+            <a class="user-nav-link" href="">SIGN IN</a>
+          </button>
+          <button class="user-nav__button" id="open_pop_up">
+            <a class="user-nav-link" href="#">SIGN UP</a>
+          </button>
         </div>
       </div>
     </div>
   </header>
+
+
+
+  <div class="pop_up" id="pop_up">
+    <div class="pop_up_container">
+      <div class="pop_up_body" id="pop_up_body">
+        <h5 class="pop_up_body-title">Sign Up</h5>
+        <p class="pop_up_body-text">Fill in the data for registration on the site</p>
+        <form style="width: 375px; margin: 0 auto">
+          <input class="input-mail" type="email" placeholder="Your Email">
+          <input class="input-number" type="tel" id="phone-mask" placeholder="+7 (777) 777 77-77">
+
+
+          <div class="input__box">
+            <input class="input-password" type="password" placeholder="Your Password">
+            <div class="input__btn">
+              <img class="input-img" src="images/show.svg" alt="">
+            </div>
+          </div>
+
+          <div class="input__box">
+            <input class="input-password__second" type="password" placeholder="Confirm password">
+            <div class="input__btn-second">
+              <img class="input-img" src="images/show.svg" alt="">
+            </div>
+          </div>
+
+          <button>Sign Up</button>
+        </form>
+        <div class="pop_up_close" id="pop_up_close">
+          <a class="pop_up_close-link" href="">
+            <img class="pop_up_close-img" src="images/close.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <main class="main">
     <section class="top">
       <div class="container">
@@ -60,11 +103,10 @@
           </div>
         </div>
       </div>
-      <!-- <img class="top__img" src="images/top-bg.svg" alt="top-bg"> -->
     </section>
 
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about__inner">
           <ul class="about__list">
@@ -103,7 +145,7 @@
       </div>
     </section>
 
-    <section class="tools">
+    <section class="tools" id="gallery">
       <h3 class="tools__title title">
         Your choice
       </h3>
@@ -178,7 +220,7 @@
     </section>
 
 
-    <section class="info">
+    <section class="info" id="pricing">
       <div class="container">
         <div class="info__inner">
           <div class="info__content">
@@ -201,7 +243,7 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="faq">
       <div class="container">
         <div class="contacts__inner">
           <h3 class="contacts__title title">
@@ -222,7 +264,7 @@
 
 
 
-  <footer class="footer">
+  <footer class="footer" id="benefits">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__top">
@@ -336,7 +378,7 @@
   </footer>
 
 
-
+  <script src="https://unpkg.com/imask"></script>
   <script src="js/main.min.js"></script>
 </body>
 

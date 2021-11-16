@@ -63,34 +63,42 @@ button {
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 2px;
+  transition: all .5s;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .user-nav {
   margin-left: 52px;
   margin-right: 13px;
+  &-link{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 
-.user-nav__link {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 20px;
+.user-nav__button {
   text-align: center;
   letter-spacing: 2px;
+  background: #0F1145;
   color: #F2994A;
   padding: 8px 28px;
   border: 1px solid #F2994A;
   border-radius: 4px;
 }
 
-.user-nav__link+.user-nav__link {
+.user-nav__button+.user-nav__button {
   margin-left: 20px;
   background-color: #F2994A;
   color: #fff;
 }
 
-.top{
+.top {
   background-image: url(../images/top-bg.svg);
   background-repeat: no-repeat;
   background-position: 90% 85%;
@@ -223,7 +231,7 @@ button {
   font-weight: 700;
 }
 
-.info{
+.info {
   background-image: url(../images/info-bg.png);
   background-repeat: no-repeat;
   background-position: 100%;
@@ -238,7 +246,8 @@ button {
 .info__content {
   width: 470px;
   margin-right: 243px;
-  &-btn{
+
+  &-btn {
     display: inline-block;
     font-weight: 500;
     color: #fff;
@@ -270,15 +279,15 @@ button {
   margin-bottom: 46px;
 }
 
-.info__image{
+.info__image {
   margin-left: 50px;
 }
 
-.contacts{
+.contacts {
   padding-bottom: 200px;
 }
 
-.contacts__inner{
+.contacts__inner {
   background: rgba(60, 62, 125, 0.19);
   backdrop-filter: blur(134px);
   border-radius: 5px;
@@ -286,7 +295,7 @@ button {
   text-align: center;
 }
 
-.contacts__title{
+.contacts__title {
   font-family: 'Rubik';
   font-weight: 500;
   font-size: 36px;
@@ -295,7 +304,7 @@ button {
   margin-bottom: 20px;
 }
 
-.contacts__text{
+.contacts__text {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: normal;
@@ -307,11 +316,12 @@ button {
   margin: 23px auto;
 }
 
-.contacts__form{
+.contacts__form {
   margin: 0 auto;
   width: 416px;
   position: relative;
-  &-input{
+
+  &-input {
     background: #F6F6F6;
     opacity: 0.1;
     border-radius: 5px;
@@ -319,16 +329,19 @@ button {
     display: block;
     width: 100%;
   }
-  &-btn{
+
+  &-btn {
     width: 128px;
     background: #F2994A;
     border-radius: 0px 5px 5px 0px;
-    padding: 18px 0;
+    padding: 16px 0;
     position: absolute;
-    top: 0;
+    top: 2px;
     right: 0;
+    border: none;
   }
-  &-text{
+
+  &-text {
     font-family: 'Rubik';
     font-weight: 500;
     font-size: 14px;
@@ -339,7 +352,7 @@ button {
   }
 }
 
-.contacts__form-input::placeholder{
+.contacts__form-input::placeholder {
   font-family: 'Inter';
   font-style: normal;
   font-weight: normal;
@@ -347,16 +360,18 @@ button {
   line-height: 20px;
   letter-spacing: 0.2px;
 }
-.footer{
+
+.footer {
   background-image: url(../images/footer-bg.svg);
   // background-position: center;
 }
 
-.footer__top{
+.footer__top {
   display: flex;
   justify-content: space-between;
   margin-bottom: 94px;
-  &-title{
+
+  &-title {
     font-weight: bold;
     font-size: 26px;
     line-height: 32px;
@@ -365,18 +380,19 @@ button {
   }
 }
 
-.footer__social-list{
+.footer__social-list {
   display: flex;
 }
 
-.footer__social-item{
+.footer__social-item {
   margin-left: 16px;
 }
 
-.footer__middle{
+.footer__middle {
   display: flex;
   justify-content: space-between;
-  &-title{
+
+  &-title {
     font-weight: bold;
     font-size: 15px;
     line-height: 18px;
@@ -384,7 +400,8 @@ button {
     color: #FFFFFF;
     margin-bottom: 25px;
   }
-  &-link{
+
+  &-link {
     display: block;
     font-size: 15px;
     line-height: 20px;
@@ -394,15 +411,133 @@ button {
   }
 }
 
-.footer__bottom{
+.footer__bottom {
   display: flex;
   justify-content: center;
   padding-top: 120px;
   padding-bottom: 50px;
-  &-item{
+
+  &-item {
     margin-right: 32px;
   }
 }
+
+.pop_up{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.52);
+  z-index: 2;
+  &.active{
+    display: block;
+  }
+  &_container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  &_body{
+    margin: auto;
+    width: 90%;
+    background: #FFFFFF;
+    box-shadow: inset 66.3px -66.3px 66.3px rgba(194, 194, 194, 0.1), inset -66.3px 66.3px 66.3px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    text-align: center;
+    padding: 100px;
+    position: relative;
+    &-title{
+      font-size: 44px;
+    line-height: 53px;
+    text-align: center;
+    color: #231F20;
+    margin-bottom: 40px;
+    }
+    &-text{
+      font-family: 'Rubik';
+      font-size: 17px;
+      line-height: 150%;
+      text-align: center;
+      color: #231F20;
+    }
+  }
+}
+
+.pop_up_body input{
+  display: block;
+  margin: 25px auto 0 auto;
+  background: ghostwhite;
+  border-radius: 5px;
+  border: none;
+  padding: 18px 16px;
+  width: 372px;
+  &::placeholder{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #5B5B5B;
+  }
+}
+
+.pop_up_body button{
+  background: #F2994A;
+  box-shadow: -11.09px 18.13px 36.6483px rgba(242, 153, 74, 0.13);
+  border-radius: 3px;
+  padding: 8px 25px;
+  border: none;
+  margin-top: 45px;
+}
+
+.pop_up_close{
+  position: absolute;
+  top: 45px;
+  right: 45px;
+}
+
+.input__box{
+  position: relative;
+}
+
+.input__btn.active{
+  &::after{
+    opacity: 0;
+  }
+}
+
+.input__btn-second.active{
+  &::after{
+    opacity: 0;
+  }
+}
+
+.input__btn,
+.input__btn-second{
+  position: absolute;
+  right: 15px;
+  top: 19px;
+  &::after{
+    content: '';
+    width: 23px;
+    height: 2px;
+    position: absolute;
+    top: 7px;
+    right: -1px;
+    opacity: 1;
+    background: #F2994A;
+    transform: rotate(135deg);
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 

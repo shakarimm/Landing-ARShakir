@@ -11,6 +11,7 @@ closePopUp.addEventListener('click', () => {
   popUp.classList.remove('active');
 })
 
+
 var phoneMask = IMask(
   document.getElementById('phone-mask'), {
     mask: '+{7}(000)000-00-00'
@@ -18,8 +19,8 @@ var phoneMask = IMask(
 
 
 function showPassword() {
-  const btn = document.querySelector('.input__btn')
-  const input = document.querySelector('.input-password')
+  let btn = document.querySelector('.input__btn')
+  let input = document.querySelector('.input-password')
 
   btn.addEventListener('click', () => {
     btn.classList.toggle('active')
@@ -36,8 +37,8 @@ function showPassword() {
 showPassword()
 
 function showPasswordSecond() {
-  const btnSecond = document.querySelector('.input__btn-second')
-  const inputSecond = document.querySelector('.input-password__second')
+  let btnSecond = document.querySelector('.input__btn-second')
+  let inputSecond = document.querySelector('.input-password__second')
 
   btnSecond.addEventListener('click', () => {
     btnSecond.classList.toggle('active')
@@ -56,5 +57,13 @@ showPasswordSecond()
 
 
 
+function checkForm()
+{
+    const inputMail = document.querySelector('.input-mail').value;
+    const inputValue = document.querySelector('.input-password').value
+    const inputSecondValue = document.querySelector('.input-password__second').value
+    const inputTel = document.querySelector('.input-number').value;
 
-
+    const cansubmit = (inputMail.length > 0 && inputValue.length > 0 && inputSecondValue.length > 0 && inputTel.length > 0);
+    document.getElementById("myButton").disabled = !cansubmit;
+};

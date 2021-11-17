@@ -57,25 +57,21 @@
         <h5 class="pop_up_body-title">Sign Up</h5>
         <p class="pop_up_body-text">Fill in the data for registration on the site</p>
         <form style="width: 375px; margin: 0 auto">
-          <input class="input-mail" type="email" placeholder="Your Email">
-          <input class="input-number" type="tel" id="phone-mask" placeholder="+7 (777) 777 77-77">
-
-
+          <input class="input-mail" type="email" placeholder="Your Email" onkeyup="checkForm()">
+          <input class="input-number" type="tel" id="phone-mask" placeholder="+7 (777) 777 77-77" onkeyup="checkForm()">
           <div class="input__box">
-            <input class="input-password" type="password" placeholder="Your Password">
+            <input class="input-password" type="password" placeholder="Your Password" onkeyup="checkForm()">
             <div class="input__btn">
               <img class="input-img" src="images/show.svg" alt="">
             </div>
           </div>
-
           <div class="input__box">
-            <input class="input-password__second" type="password" placeholder="Confirm password">
+            <input class="input-password__second" type="password" placeholder="Confirm password" onkeyup="checkForm()">
             <div class="input__btn-second">
               <img class="input-img" src="images/show.svg" alt="">
             </div>
           </div>
-
-          <button>Sign Up</button>
+          <button class="send__btn" disabled="disabled" id="myButton">Sign Up</button>
         </form>
         <div class="pop_up_close" id="pop_up_close">
           <a class="pop_up_close-link" href="">

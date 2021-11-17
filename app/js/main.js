@@ -67,3 +67,7 @@ function checkForm()
     const cansubmit = (inputMail.length > 0 && inputValue.length > 0 && inputSecondValue.length > 0 && inputTel.length > 0);
     document.getElementById("myButton").disabled = !cansubmit;
 };
+
+$('.menu__btn').on('click', function () {
+  $('.menu__list').toggleClass('menu__list--active')
+});
